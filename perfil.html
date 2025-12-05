@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Brush | Perfil</title>
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+body { font-family: 'Times New Roman', serif; }
+.bg-gradient { background: linear-gradient(135deg, #1e3a8a, #64748b); }
+</style>
+</head>
+
+<body class="bg-gradient min-h-screen">
+
+<header class="bg-white p-4 shadow-sm flex justify-between items-center">
+<div class="text-3xl font-bold text-blue-800">BRUSH</div>
+
+<nav class="flex gap-4 text-blue-800 text-xl">
+<a href="feed.html">🏠</a>
+<a href="subir.html">➕</a>
+<a href="favoritos.html">⭐</a>
+<a href="likes.html">❤️</a>
+<a href="configuracion.html">⚙️</a>
+</nav>
+</header>
+
+<main class="p-6">
+
+<section class="flex flex-col md:flex-row gap-6 bg-white/90 shadow-sm rounded-lg p-6 items-center">
+<img src="vany.jpeg" class="rounded-full w-28 h-28 border-4 border-blue-700 object-cover" />
+<div>
+<h2 class="text-2xl font-semibold text-blue-800">Testervany234</h2>
+<p class="text-gray-700">Artista universitario apasionado por la pintura y la fotografía. (Soltero)</p>
+
+<div class="flex gap-6 mt-3 text-gray-800 text-sm">
+<span><strong>6</strong> publicaciones</span>
+<span><strong>300</strong> seguidores</span>
+<span><strong>250</strong> seguidos</span>
+</div>
+</div>
+</section>
+
+<section class="mt-8">
+<h3 class="text-xl text-white mb-4 font-semibold">Publicaciones</h3>
+
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+
+<img onclick="openImage(this.src)" 
+src="https://images.unsplash.com/photo-1629977681402-c7db16d6c6d1?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGFpc2FqZSUyMGRlbCUyMHB1ZWJsb3xlbnwwfHwwfHx8MA%3D%3D" 
+class="rounded-lg shadow-sm aspect-square object-cover cursor-pointer" />
+
+<img onclick="openImage(this.src)" 
+src="https://cdna.artstation.com/p/assets/images/images/092/212/924/large/fusion-phobia-shinobi-koi-color.webp?1759004201" 
+class="rounded-lg shadow-sm aspect-square object-cover cursor-pointer" />
+
+<img onclick="openImage(this.src)" 
+src="https://cdnb.artstation.com/p/assets/images/images/092/992/365/large/daniela-flower-galaxy-girl-sketch.webp?1761248145" 
+class="rounded-lg shadow-sm aspect-square object-cover cursor-pointer" />
+
+<img onclick="openImage(this.src)" 
+src="https://cdna.artstation.com/p/assets/images/images/093/080/478/medium/aung-ko-zin-bird-copy.webp?1761550754" 
+class="rounded-lg shadow-sm aspect-square object-cover cursor-pointer" />
+
+<img onclick="openImage(this.src)" 
+src="https://cdnb.artstation.com/p/assets/images/images/093/080/487/medium/aung-ko-zin-reptile-2-copy.webp?1761550175" 
+class="rounded-lg shadow-sm aspect-square object-cover cursor-pointer" />
+
+<img onclick="openImage(this.src)" 
+src="https://cdna.artstation.com/p/assets/images/images/093/080/496/medium/aung-ko-zin-insect.webp?1761550189" 
+class="rounded-lg shadow-sm aspect-square object-cover cursor-pointer" />
+
+<img onclick="openImage(this.src)" 
+src="https://cdnb.artstation.com/p/assets/images/images/078/230/985/medium/dolly-chris-20240721212128.jpg?1721568139" 
+class="rounded-lg shadow-sm aspect-square object-cover cursor-pointer" />
+
+<img onclick="openImage(this.src)" 
+src="https://cdnb.artstation.com/p/assets/images/images/073/453/663/medium/dolly-chris-psc-3.jpg?1709693419" 
+class="rounded-lg shadow-sm aspect-square object-cover cursor-pointer" />
+
+<img onclick="openImage(this.src)" 
+src="https://cdnb.artstation.com/p/assets/images/images/072/924/621/medium/dolly-chris-20240221210029.jpg?1708520497" 
+class="rounded-lg shadow-sm aspect-square object-cover cursor-pointer" />
+
+<img onclick="openImage(this.src)" 
+src="https://cdnb.artstation.com/p/assets/images/images/072/884/435/medium/dolly-chris-20240220202454.jpg?1708433576" 
+class="rounded-lg shadow-sm aspect-square object-cover cursor-pointer" />
+
+</div>
+</section>
+
+</main>
+
+<!-- ============================= -->
+<!--      MODAL CON BOTÓN X       -->
+<!-- ============================= -->
+
+<div id="imageModal" class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm z-50 
+    flex items-center justify-center">
+
+    <!-- Botón X -->
+    <button onclick="closeModal()"
+        class="absolute top-4 right-4 text-white text-4xl font-bold 
+               hover:scale-110 transition">
+        ×
+    </button>
+
+    <div id="modalContent" 
+        class="flex items-center justify-center w-full h-full opacity-0 scale-90 transition-all duration-200">
+        
+        <img id="modalImage" 
+            class="max-w-[90%] max-h-[90%] rounded-lg shadow-lg border-4 border-white object-contain" />
+    </div>
+</div>
+
+<script>
+function openImage(src) {
+    const modal = document.getElementById("imageModal");
+    const content = document.getElementById("modalContent");
+    const img = document.getElementById("modalImage");
+
+    img.src = src;
+    modal.classList.remove("hidden");
+
+    // Animación entrada
+    setTimeout(() => {
+        content.classList.remove("opacity-0", "scale-90");
+        content.classList.add("opacity-100", "scale-100");
+    }, 10);
+}
+
+// cerrar modal con el botón X
+function closeModal() {
+    const modal = document.getElementById("imageModal");
+    const content = document.getElementById("modalContent");
+
+    // Animación salida
+    content.classList.add("opacity-0", "scale-90");
+    content.classList.remove("opacity-100", "scale-100");
+
+    setTimeout(() => {
+        modal.classList.add("hidden");
+    }, 150);
+}
+
+// cerrar haciendo click en el fondo
+document.getElementById("imageModal").addEventListener("click", function(e) {
+    if (e.target === this) {
+        closeModal();
+    }
+});
+</script>
+
+</body>
+</html>
+
