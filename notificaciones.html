@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRUSH – Notificaciones</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: linear-gradient(135deg, #1e3a8a, #64748b);
+            color: white;
+        }
+
+        header {
+            background: rgba(255,255,255,0.15);
+            padding: 20px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        a.btn-back {
+            color: #fff;
+            background: rgba(255,255,255,0.3);
+            padding: 10px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 15px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .notif {
+            background: rgba(255,255,255,0.15);
+            padding: 18px;
+            margin-bottom: 18px;
+            border-radius: 12px;
+            backdrop-filter: blur(8px);
+        }
+
+        .notif strong {
+            color: #dbeafe;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Notificaciones</h1>
+    <a class="btn-back" href="feed.html">⟵ Volver al Feed</a>
+</header>
+
+<div class="container">
+
+    <div class="notif">
+        <strong>Jonathan</strong> comentó en tu publicación:  
+        <p>“Excelente trabajo, bro 👌”</p>
+    </div>
+
+    <div class="notif">
+        <strong>Guadalupe</strong> le dio like a “Ilustración Azulada”.  
+    </div>
+
+    <div class="notif">
+        <strong>Sistema</strong>: Se ha actualizado tu perfil correctamente.  
+    </div>
+
+</div>
+
+</body>
+</html>
+

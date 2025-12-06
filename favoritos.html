@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRUSH – Favoritos</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: linear-gradient(135deg, #1e3a8a, #64748b);
+            color: white;
+        }
+
+        header {
+            background: rgba(255,255,255,0.15);
+            padding: 20px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        a.btn-back {
+            color: #fff;
+            background: rgba(255,255,255,0.3);
+            padding: 10px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 15px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.15);
+            padding: 18px;
+            margin-bottom: 22px;
+            border-radius: 12px;
+            backdrop-filter: blur(8px);
+        }
+
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Mis Favoritos</h1>
+    <a class="btn-back" href="feed.html">⟵ Volver al Feed</a>
+</header>
+
+<div class="container">
+
+    <!-- Tarjeta ejemplo -->
+    <div class="card">
+        <h3>Obra guardada #1</h3>
+        <img src="https://picsum.photos/600/400?random=1">
+    </div>
+
+    <div class="card">
+        <h3>Obra guardada #2</h3>
+        <img src="https://picsum.photos/600/400?random=2">
+    </div>
+
+</div>
+
+</body>
+</html>

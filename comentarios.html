@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRUSH – Comentarios</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: linear-gradient(135deg, #1e3a8a, #64748b);
+            color: white;
+        }
+
+        header {
+            background: rgba(255,255,255,0.15);
+            padding: 20px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        a.btn-back {
+            color: #fff;
+            background: rgba(255,255,255,0.3);
+            padding: 10px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 15px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .comment-card {
+            background: rgba(255,255,255,0.15);
+            padding: 18px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            backdrop-filter: blur(8px);
+        }
+
+        .comment-card strong {
+            color: #dbeafe;
+            font-size: 15px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 90px;
+            border-radius: 10px;
+            padding: 12px;
+            resize: none;
+            border: none;
+            outline: none;
+        }
+
+        button {
+            margin-top: 12px;
+            padding: 12px 22px;
+            border-radius: 10px;
+            border: none;
+            background: white;
+            color: #1e3a8a;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #cbd5e1;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Mis Comentarios</h1>
+    <a class="btn-back" href="feed.html">⟵ Volver al Feed</a>
+</header>
+
+<div class="container">
+
+    <div class="comment-card">
+        <strong>Giovanni comentó:</strong>
+        <p>“Me encanta el contraste de colores.”</p>
+    </div>
+
+    <div class="comment-card">
+        <strong>Giovanni comentó:</strong>
+        <p>“Excelente estilo digital.”</p>
+    </div>
+
+    <h3>Agregar comentario (solo diseño, no funcional):</h3>
+    <textarea placeholder="Escribe tu comentario aquí..."></textarea>
+    <button>Enviar</button>
+
+</div>
+
+</body>
+</html>

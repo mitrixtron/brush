@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRUSH – Configuración</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: linear-gradient(135deg, #1e3a8a, #64748b);
+            color: white;
+        }
+
+        header {
+            background: rgba(255,255,255,0.15);
+            padding: 20px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        a.btn-back {
+            color: #fff;
+            background: rgba(255,255,255,0.3);
+            padding: 10px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 15px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .setting {
+            background: rgba(255,255,255,0.15);
+            padding: 18px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            backdrop-filter: blur(8px);
+        }
+
+        label {
+            font-size: 15px;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            margin-bottom: 12px;
+        }
+
+        button {
+            padding: 12px 22px;
+            border-radius: 10px;
+            border: none;
+            background: white;
+            color: #1e3a8a;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #cbd5e1;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Configuración</h1>
+    <a class="btn-back" href="feed.html">⟵ Volver al Feed</a>
+</header>
+
+<div class="container">
+
+    <div class="setting">
+        <h3>⚙️ Información del Perfil</h3>
+
+        <label>Nombre de usuario:</label>
+        <input type="text" placeholder="Giovanni Ortega">
+
+        <label>Biografía:</label>
+        <input type="text" placeholder="Artista digital y fotógrafo.">
+
+        <button>Guardar Cambios</button>
+    </div>
+
+
+    <div class="setting">
+        <h3>🎨 Preferencias de Apariencia</h3>
+
+        <label>Tema del sistema</label>
+        <select>
+            <option>Claro</option>
+            <option>Oscuro</option>
+            <option selected>Automático</option>
+        </select>
+
+        <button>Actualizar Preferencias</button>
+    </div>
+
+
+    <div class="setting">
+        <h3>🔒 Seguridad</h3>
+
+        <label>Reiniciar datos del sistema</label>
+        <button>Borrar información local</button>
+    </div>
+
+</div>
+
+</body>
+</html>
+
